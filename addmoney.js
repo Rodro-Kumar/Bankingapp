@@ -6,10 +6,10 @@ document
     const pin = document.getElementById("pin").value;
 
     if (pin === "1234") {
-      const balance = document.getElementById("balance").innerText;
+      const balance = document.getElementById("main-balance").innerText;
       const amountNumber = parseFloat(amount);
       const balanceNumber = parseFloat(balance);
-      document.getElementById("balance").innerText =
+      document.getElementById("main-balance").innerText =
         balanceNumber + amountNumber;
     } else {
       alert("Something Wrong !");
