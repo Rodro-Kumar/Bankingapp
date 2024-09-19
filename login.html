@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Login</title>
+    <link rel="stylesheet" href="/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex items-center flex-col justify-center h-[100vh]">
+      <!-- Error  Start-->
+      <div class="flex items-center justify-center">
+        <div
+          id="error-message"
+          class="bg-red-600 hidden text-white text-base text-center py-3 px-4 rounded-lg mb-3"
+        >
+          <h4>Something Wrong !</h4>
+        </div>
+      </div>
+      <!-- Error End -->
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo bg-[#1f1f1f] phone-1">
+            <div>
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Number</span>
+                    </label>
+                    <input
+                      id="number"
+                      type="text"
+                      placeholder="number"
+                      class="input input-bordered"
+                      required
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input
+                      id="pin"
+                      type="password"
+                      placeholder="please enter your pin"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="login-btn" class="btn btn-accent">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/login.js"></script>
+  </body>
+</html>
