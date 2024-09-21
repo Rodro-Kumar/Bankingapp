@@ -28,7 +28,7 @@
       <div class="mockup-phone border-primary">
         <div class="camera"></div>
         <div class="display">
-          <div class="artboard bg-[#333333] artboard-demo phone-1">
+          <div class="artboard bg-[#333333] artboard-demo phone-2">
             <div class="mt-5 ml-5 flex items-start w-full">
               <div class="bg-black py-2 px-5 rounded-md">
                 <div class="stat-figure text-primary"></div>
@@ -44,12 +44,15 @@
             <div class="divider"></div>
             <!-- Add money & Cash out button -->
 
-            <div>
+            <div
+              class="flex items-center flex-wrap gap-x-3 gap-y-3 justify-center"
+            >
               <button class="add-money btn btn-accent">Add Money</button>
               <button class="cash-out btn btn-secondary">Cash Out</button>
+              <button class="transaction btn">Transaction</button>
             </div>
 
-            <!-- form add money-->
+            <!--add money form-->
             <div
               id="add-money-form"
               class="card bg-base-100 w-[90%] mt-5 max-w-sm shrink-0 shadow-2xl"
@@ -124,6 +127,16 @@
                 </div>
               </form>
             </div>
+            <!-- trasaction -->
+            <div id="transaction-history" class="hidden h-[60%] py-6">
+              <h3 class="text-xl">Transaction</h3>
+              <p class="text-green-700 text-lg capitalize addMoneyTransaction">
+                add money
+              </p>
+              <p class="text-red-600 text-lg capitalize cashoutTransaction">
+                cash out
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -131,5 +144,6 @@
     <script src="/addmoney.js"></script>
     <script src="/cashout.js"></script>
     <script src="/feature.js"></script>
+    <script src="/utilities.js"></script>
   </body>
 </html>

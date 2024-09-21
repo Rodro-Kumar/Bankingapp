@@ -2,16 +2,19 @@ document
   .getElementById("add-money")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const amount = document.getElementById("amount").value;
+    const amount = getInputFieldById("amount");
     const pin = document.getElementById("pin").value;
 
     if (pin === "1234") {
-      const balance = document.getElementById("main-balance").innerText;
-      const amountNumber = parseFloat(amount);
-      const balanceNumber = parseFloat(balance);
-      document.getElementById("main-balance").innerText =
-        balanceNumber + amountNumber;
+      const balance = getTextFieldById("main-balance");
+      const newBalance = amount + balance;
+      document.getElementById("main-balance").innerText = newBalance;
+      document.querySelector(
+        ".addMoneyTransaction"
+      ).innerText = `add $${amount} balance: $${newBalance}`;
+    } else if (pin == "1234" && isNaN(amount)) {
+      alert("Not a Number");
     } else {
-      alert("Something Wrong !");
+      alert("wrong pin number !");
     }
   });
